@@ -1,0 +1,1 @@
+bash ./dist_test.sh configs/mask_rcnn_tinyvim_b_fpn_1x_coco.py ckpt/tinyvim_b_coco.pth 8 --eval bbox segm
