@@ -12,6 +12,7 @@ Huawei Noah’s Ark Lab
 
 ## 🔥 News
 
+- **`2024/11/29`**: **Code is open.**
 - **`2024/11/27`**: **TinyViM is available at [Arxiv](https://arxiv.org/abs/2411.17473).**
 
 ## 📷 Introduction
@@ -21,6 +22,8 @@ Huawei Noah’s Ark Lab
 <img src="fig/whole.png"  />
 
 We build a series of tiny hybrid vision Mamba called **TinyViM** by integrating mobile-friendly convolution and efficient Laplace mixer. The proposed TinyViM achieves impressive performance on several downstream tasks including image classification, semantic segmentation, object detection and instance segmentation. In particular, TinyViM outperforms Convolution, Transformer and Mamba-based models with similar scales, and the throughput is about 2-3 times higher than that of other Mamba-based models.
+
+
 
 ## 🏆 Performance
 
@@ -39,7 +42,7 @@ We build a series of tiny hybrid vision Mamba called **TinyViM** by integrating 
 |     TinyViM-B     | Mask RCNN |     42.3     | 38.7       |
 | TinyViM-L | Mask RCNN |     44.5     | 40.7    |
 
-### 3️⃣ Segmentation
+### 3️⃣ Semantic Segmentation
 
 |   Model   | Head | Throughput | mIoU |
 | :-------: | :--: | :--------: | ---- |
@@ -59,6 +62,10 @@ We build a series of tiny hybrid vision Mamba called **TinyViM** by integrating 
   pip install timm==0.5.4
   ```
   
+  Please refer to [VMamba](https://github.com/MzeroMiko/VMamba) for installing **selective_scan_cuda**.
+  
+  Please refer to  [mmdetection-2.28.2](https://github.com/open-mmlab/mmdetection/tree/v2.28.2) and [mmsegmentation-0.30.0](https://github.com/open-mmlab/mmsegmentation/tree/v0.30.0) for environments and data preparation of detection and segmentation, respectively. 
+  
 - **Train**
 
   ```shell
@@ -77,7 +84,23 @@ We build a series of tiny hybrid vision Mamba called **TinyViM** by integrating 
   python speed_gpu.py --model TinyViM_S --resolution 224 --batch 2048
   ```
 
+- **Detection & Instance Segmentation**
 
+  ```shell
+  cd detection
+  bash train.sh # for train
+  bash eval.sh # for eval
+  ```
+
+- **Semantic Segmentation**
+
+  ```shell
+  cd segmentation
+  bash train.sh # for train
+  bash eval.sh # for eval
+  ```
+
+  
 
 ## 🌟 Citation
 
@@ -99,5 +122,5 @@ If you are interested in our work, please consider giving a 🌟 and citing our 
 
 ## 💡Acknowledgment
 
-Thanks to previous open-sourced repo: [Efficientformer](https://github.com/snap-research/EfficientFormer), [Swiftformer](https://github.com/Amshaker/SwiftFormer), [mmsegmentation](https://github.com/open-mmlab/mmsegmentation/tree/v0.30.0), [mmdetection](https://github.com/open-mmlab/mmdetection/tree/v2.28.2)
+Thanks to previous open-sourced repo: [Efficientformer](https://github.com/snap-research/EfficientFormer), [Swiftformer](https://github.com/Amshaker/SwiftFormer), [RepViT](https://github.com/THU-MIG/RepViT), [mmsegmentation](https://github.com/open-mmlab/mmsegmentation/tree/v0.30.0), [mmdetection](https://github.com/open-mmlab/mmdetection/tree/v2.28.2)
 

@@ -1,0 +1,1 @@
+python main.py --eval --model TinyViM_S --resume pretrain/TinyViM_300e.pth --data-path ~/imagenet

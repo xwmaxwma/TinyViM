@@ -1,0 +1,1 @@
+bash ./tools/dist_test.sh configs/sem_fpn/fpn_tinyvim_b_ade20k_40k.py ckpt/tinyvim_b_ade20k.pth 8 --eval mIoU
