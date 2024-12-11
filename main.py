@@ -28,7 +28,7 @@ import utils
 
 def get_args_parser():
     parser = argparse.ArgumentParser(
-        'RepViT training and evaluation script', add_help=False)
+        'TinyViM training and evaluation script', add_help=False)
     parser.add_argument('--batch-size', default=256, type=int)
     parser.add_argument('--epochs', default=300, type=int)
 
