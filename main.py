@@ -33,7 +33,7 @@ def get_args_parser():
     parser.add_argument('--epochs', default=300, type=int)
 
     # Model parameters
-    parser.add_argument('--model', default='repvit_m1_1', type=str, metavar='MODEL',
+    parser.add_argument('--model', default='TinyViM_S', type=str, metavar='MODEL',
                         help='Name of model to train')
     parser.add_argument('--input-size', default=224,
                         type=int, help='images input size')
@@ -183,7 +183,7 @@ def get_args_parser():
                         help='frequency of model saving')
     
     parser.add_argument('--deploy', action='store_true', default=False)
-    parser.add_argument('--project', default='repvit', type=str)
+    parser.add_argument('--project', default='tinyvim', type=str)
     return parser
 
 
@@ -454,7 +454,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
-        'RepViT training and evaluation script', parents=[get_args_parser()])
+        'TinyViM training and evaluation script', parents=[get_args_parser()])
     args = parser.parse_args()
     if args.resume and not args.eval:
         args.output_dir = '/'.join(args.resume.split('/')[:-1])
