@@ -12,6 +12,7 @@ Huawei Noah’s Ark Lab
 
 ## 🔥 News
 
+- **`2025/06/26`**: **TinyViM is accepted by ICCV'25 and the checkpoints are available.**
 - **`2024/11/29`**: **Code is open.**
 - **`2024/11/27`**: **TinyViM is available at [Arxiv](https://arxiv.org/abs/2411.17473).**
 
@@ -29,11 +30,13 @@ We build a series of tiny hybrid vision Mamba called **TinyViM** by integrating 
 
 ### 1️⃣ Classification
 
-| Model |                           Type                           | Params (M) | GMACs | Throughput (im/s) | Top-1 |
+| Model |                           Type                           | Params (M) | GMACs | Throughput (im/s) | Top-1(300e/1000e) |
 | :------------: | :----------------------------------------------------------: | ---------- | :-------: | :-------: | --------- |
-|   TinyViM-S   | CNN-Mamba | 5.6     |    0.9    |    2563    |   79.2   |
-|  TinyViM-B  | CNN-Mamba | 11.0     |    1.5    |    1851    |   81.2   |
-|   TinyViM-L   | CNN-Mamba | 31.7    |    4.7    |    843    |   83.3   |
+|   TinyViM-S   | CNN-Mamba | 5.6     |    0.9    |    2563    |   79.2/[80.3](https://drive.google.com/drive/folders/1cLgX_Mlk9W5_nMtgwmLC71ap-RlvT7eW?usp=sharing)   |
+|  TinyViM-B  | CNN-Mamba | 11.0     |    1.5    |    1851    |   [81.2](https://drive.google.com/drive/folders/1eo9RBT186E11pJFOO8uOi9S5GoR0PosS?usp=drive_link)/[82.1](https://drive.google.com/drive/folders/1nZAz0nt8Ztk7YqXbrXW8BZyPZZ49HmVx?usp=sharing)   |
+|   TinyViM-L   | CNN-Mamba | 31.7    |    4.7    |    843    |   [83.3](https://drive.google.com/drive/folders/1BtxDPRyll8FVbZfbdjH-oDJU7dYKaSfY?usp=sharing)/[83.6](https://drive.google.com/drive/folders/1-nfZiEMix8Xd625M2UVFXrujIIV-K2_2?usp=sharing)   |
+
+**We have provided the checkpoints and training logs in the table above!**
 
 ### 2️⃣  Detection & Instance Segmentation
 
@@ -123,4 +126,5 @@ If you are interested in our work, please consider giving a 🌟 and citing our 
 ## 💡Acknowledgment
 
 Thanks to previous open-sourced repo: [Efficientformer](https://github.com/snap-research/EfficientFormer), [Swiftformer](https://github.com/Amshaker/SwiftFormer), [RepViT](https://github.com/THU-MIG/RepViT), [mmsegmentation](https://github.com/open-mmlab/mmsegmentation/tree/v0.30.0), [mmdetection](https://github.com/open-mmlab/mmdetection/tree/v2.28.2)
+
 
